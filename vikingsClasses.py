@@ -21,7 +21,9 @@ class Viking:
     def __init__(self, name, health, strenght):
         Soldier.__init__(self,health, strenght)
         self.name=name
-        
+
+    def attack(self):
+        return self.strength    
 
     def receiveDamage(self,damage):
         self.health-=damage
@@ -31,7 +33,7 @@ class Viking:
             return f"{self.name} has died in act of combat"
         
     def battleCry(self):
-        return ("Odin los posee todos")
+        return ("Odin Owns You All!")
 
 
 # Saxon
