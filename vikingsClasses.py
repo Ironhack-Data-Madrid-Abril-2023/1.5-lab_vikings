@@ -90,7 +90,7 @@ class War:
         if self.saxonArmy == []:
             return f"Vikings have won the war of the century!"
         
-        if self.vikingArmy == []:
+        elif self.vikingArmy == []:
             return f"Saxons have fought for their lives and survive another day..."
         else:
             return f"Vikings and Saxons are still in the thick of battle."
