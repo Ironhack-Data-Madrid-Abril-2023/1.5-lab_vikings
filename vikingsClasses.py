@@ -27,12 +27,12 @@ class Viking(Soldier):
     def receiveDamage(self, damage):
         self.health-=damage
 
-        if self.health == 0:
+        if self.health <= 0:
             return f'{self.name} has died in act of combat'
         else:
             return f'{self.name} has received {damage} points of damage'
     
-    def battleCry(self):
+    def battleCry():
         return 'Odin Owns You All!'
 
 
@@ -47,7 +47,7 @@ class Saxon(Soldier):
     def receiveDamage(self, damage):
         self.health-=damage
     
-        if self.health == 0:
+        if self.health <= 0:
             return f'A Saxon has died in combat'
         else:
             return f'A Saxon has received {damage} points of damage'
@@ -63,11 +63,9 @@ class War:
         self.saxonArmy=[]
     
     def addViking(self, Viking):
-        self.Viking=Viking
         self.vikingArmy.append(Viking)
     
     def addSaxon(self, Saxon):
-        self.Saxon=Saxon
         self.saxonArmy.append(Saxon)
     
     def vikingAttack(self):
